@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="bg-light">
+  <div class="    p-5 container">
+    <h1 class="text-center py-3 ">CURD APP</h1>
+
+    <!-- Product Form -->
+    <div class="row g-3">
+      <div class="col-md-12">
+        <label for="productName" class="form-label">Product Name</label>
+        <input id="productName" type="text" class="form-control" placeholder="Enter product name">
+        <div class="alert alert-danger p-2 my-2 d-none" id="nameAlert">Name must contain at least 2 letters and no
+          numbers or special characters.</div>
+      </div>
+      <div class="col-md-12">
+        <label for="productPrice" class="form-label">Product Price</label>
+        <input id="productPrice" type="text" class="form-control" placeholder="Enter product price">
+        <div class="alert alert-danger p-2 my-2 d-none" id="priceAlert">Price must be a valid number, with up to 2
+          decimal places. Use "." or "," as the decimal separator.</div>
+      </div>
+      <div class="col-md-12">
+        <label for="productCategory" class="form-label">Product Category</label>
+        <input id="productCategory" type="text" class="form-control" placeholder="Enter product category">
+        <div class="alert alert-danger p-2 my-2 d-none" id="catAlert">Category must contain at least 2 letters and no
+          numbers or special characters.</div>
+      </div>
+      <div class="col-md-12">
+        <label for="productDesc" class="form-label">Product Description</label>
+        <textarea id="productDesc" class="form-control" rows="3" placeholder="Enter product description"></textarea>
+        <div id="descAlert" class="alert alert-danger d-none">Description must be at least 5 characters!</div>
+      </div>
+      <div class="col-12 text-end">
+        <button id="addBtn" class="btn btn-primary mt-3 " disabled>Add Product</button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="row my-3">
+      <div class="col-12">
+        <input id="searchInput" type="text" placeholder="Search by name..." class="form-control">
+      </div>
+    </div>
+
+    <!-- Product Table -->
+    <div class="table-responsive">
+      <table class="table table-striped table-hover table-bordered align-middle">
+        <thead class="table-primary text-center">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody" class="text-center">
+          <!-- Content will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
